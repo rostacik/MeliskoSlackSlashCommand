@@ -1,7 +1,4 @@
 module.exports = function (context, data) {
-    context.log(data);
-    context.log('Melisko webhook was triggered!');
-
     if (data.method === "GET") {
         context.res = {
             body: {
@@ -9,6 +6,8 @@ module.exports = function (context, data) {
             }
         };
     } else if (data.method === "POST") {
+        context.log(data);
+        context.log('Melisko webhook was triggered!');
 
         let wordsOfWisdom = [
             "Vedro tabaku prejebe za týždeň, ty kurva tuberácka",
