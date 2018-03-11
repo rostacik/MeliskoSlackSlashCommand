@@ -1,11 +1,11 @@
 module.exports = function (context, data) {
-    if (data.method === "GET") {
+    if (data.method === "GET") { //for heart beat
         context.res = {
             body: {
                 "response": "I live again."
             }
         };
-    } else if (data.method === "POST") {
+    } else if (data.method === "POST") { //payload
         context.log(data);
         context.log('Melisko webhook was triggered!');
 
